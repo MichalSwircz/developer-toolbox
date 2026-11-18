@@ -1,0 +1,617 @@
+.dashboard {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 264px minmax(0, 1fr);
+  background:
+    radial-gradient(ellipse at 75% -18%, rgb(91 105 170 / 10%), transparent 42%),
+    var(--color-background);
+}
+
+.sidebar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  height: 100vh;
+  min-height: 640px;
+  flex-direction: column;
+  padding: 27px 17px 18px;
+  background: var(--color-sidebar);
+  border-right: 1px solid var(--color-border);
+}
+
+.brand {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 12px;
+  padding: 0 7px;
+}
+
+.brandMark {
+  display: grid;
+  width: 39px;
+  height: 39px;
+  flex: 0 0 auto;
+  color: #dce3ff;
+  background: linear-gradient(145deg, #6679e8, #4655ad);
+  border: 1px solid rgb(171 183 255 / 28%);
+  border-radius: 12px;
+  box-shadow: 0 5px 16px rgb(46 60 136 / 36%);
+  place-items: center;
+}
+
+.brandCopy {
+  display: grid;
+  min-width: 0;
+  gap: 3px;
+}
+
+.brandOverline {
+  color: #8d9afa;
+  font-size: 9px;
+  font-weight: 750;
+  letter-spacing: 0.16em;
+  line-height: 1;
+}
+
+.brandName {
+  overflow: hidden;
+  color: var(--color-text);
+  font-size: 13px;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.navigationGroup {
+  margin-top: 45px;
+}
+
+.navigationHeading {
+  margin: 0 9px 10px;
+  color: var(--color-text-faint);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.navigation {
+  display: grid;
+  gap: 5px;
+}
+
+.navigationItem {
+  position: relative;
+  display: flex;
+  min-height: 54px;
+  width: 100%;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 10px;
+  color: var(--color-text-muted);
+  text-align: left;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  cursor: pointer;
+  transition:
+    background-color 140ms ease,
+    border-color 140ms ease,
+    color 140ms ease,
+    transform 140ms ease;
+}
+
+.navigationItem:hover {
+  color: var(--color-text);
+  background: rgb(255 255 255 / 3%);
+}
+
+.navigationItem:active {
+  transform: translateY(1px);
+}
+
+.navigationItemActive,
+.navigationItemActive:hover {
+  color: #e6eaff;
+  background: linear-gradient(100deg, rgb(91 108 202 / 21%), rgb(91 108 202 / 8%));
+  border-color: rgb(118 134 222 / 24%);
+}
+
+.navigationItemActive::before {
+  position: absolute;
+  top: 12px;
+  bottom: 12px;
+  left: -18px;
+  width: 2px;
+  content: "";
+  background: #8998ff;
+  border-radius: 0 2px 2px 0;
+}
+
+.navigationIcon {
+  display: grid;
+  width: 33px;
+  height: 33px;
+  flex: 0 0 auto;
+  color: var(--color-icon);
+  background: var(--color-icon-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 8px;
+  place-items: center;
+}
+
+.navigationItemActive .navigationIcon {
+  color: #aab5ff;
+  background: rgb(103 120 221 / 15%);
+  border-color: rgb(127 143 242 / 22%);
+}
+
+.navigationCopy {
+  display: grid;
+  min-width: 0;
+  flex: 1;
+  gap: 3px;
+}
+
+.navigationLabel {
+  overflow: hidden;
+  color: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.navigationDescription {
+  overflow: hidden;
+  color: var(--color-text-faint);
+  font-size: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.navigationItemActive .navigationDescription {
+  color: #929ecf;
+}
+
+.navigationChevron {
+  flex: 0 0 auto;
+  color: #8998ff;
+}
+
+.sidebarBottom {
+  display: grid;
+  gap: 19px;
+  margin-top: auto;
+}
+
+.privacyCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 13px 11px;
+  background: linear-gradient(145deg, rgb(35 43 63 / 78%), rgb(26 32 46 / 78%));
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+}
+
+.privacyIcon {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 auto;
+  color: #9eb4ff;
+  background: rgb(111 136 222 / 12%);
+  border-radius: 8px;
+  place-items: center;
+}
+
+.privacyTitle {
+  margin: 1px 0 4px;
+  color: var(--color-text);
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.privacyDescription {
+  margin: 0;
+  color: var(--color-text-faint);
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+.sidebarVersion {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 3px;
+  color: #6e7789;
+  font-size: 9px;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+}
+
+.sidebarVersion span {
+  color: #434b5b;
+}
+
+.workspace {
+  min-width: 0;
+}
+
+.topbar {
+  display: flex;
+  height: 66px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 43px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--color-text-faint);
+  font-size: 11px;
+}
+
+.breadcrumbs svg {
+  color: #626c7c;
+}
+
+.breadcrumbCurrent {
+  color: #c3cada;
+  font-weight: 550;
+}
+
+.localStatus {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 10px;
+  color: #aeb8cc;
+  background: rgb(29 40 48 / 55%);
+  border: 1px solid rgb(78 119 103 / 32%);
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 550;
+}
+
+.localStatus svg {
+  color: #88b8a0;
+}
+
+.statusDot {
+  width: 6px;
+  height: 6px;
+  background: #76c79b;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgb(118 199 155 / 55%);
+}
+
+.main {
+  width: min(100%, 1400px);
+  margin: 0 auto;
+  padding: 43px clamp(26px, 4vw, 58px) 36px;
+}
+
+.pageHeading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+.pageTitleGroup {
+  display: flex;
+  min-width: 0;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.toolIcon {
+  display: grid;
+  width: 45px;
+  height: 45px;
+  flex: 0 0 auto;
+  margin-top: 3px;
+  color: #aab6ff;
+  background: linear-gradient(145deg, #252e4d, #1d2439);
+  border: 1px solid #343f63;
+  border-radius: 12px;
+  box-shadow: 0 7px 18px rgb(4 7 15 / 20%);
+  place-items: center;
+}
+
+.pageEyebrow {
+  margin: 0 0 6px;
+  color: #8593ed;
+  font-size: 9px;
+  font-weight: 750;
+  letter-spacing: 0.14em;
+}
+
+.pageHeading h1 {
+  margin: 0;
+  color: var(--color-text);
+  font-size: clamp(22px, 2.4vw, 29px);
+  font-weight: 650;
+  letter-spacing: -0.045em;
+  line-height: 1.2;
+}
+
+.pageDescription {
+  margin: 7px 0 0;
+  color: var(--color-text-muted);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.previewBadge {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 7px;
+  margin-top: 5px;
+  padding: 7px 10px;
+  color: #b7c0d0;
+  background: rgb(29 34 47 / 80%);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  font-size: 10px;
+}
+
+.previewDot {
+  width: 6px;
+  height: 6px;
+  background: #8795ff;
+  border-radius: 50%;
+  box-shadow: 0 0 7px rgb(135 149 255 / 65%);
+}
+
+.workspaceNote {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  color: #8792a5;
+}
+
+.workspaceNote svg {
+  flex: 0 0 auto;
+  color: #8298cf;
+}
+
+.workspaceNote p {
+  margin: 0;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.workspaceNote strong {
+  color: #bbc4d5;
+  font-weight: 600;
+}
+
+@media (max-width: 1120px) {
+  .dashboard {
+    grid-template-columns: 80px minmax(0, 1fr);
+  }
+
+  .sidebar {
+    align-items: center;
+    padding: 22px 10px 16px;
+  }
+
+  .brand {
+    padding: 0;
+  }
+
+  .brandCopy,
+  .navigationHeading,
+  .navigationCopy,
+  .navigationChevron,
+  .sidebarBottom {
+    display: none;
+  }
+
+  .navigationGroup {
+    width: 100%;
+    margin-top: 39px;
+  }
+
+  .navigation {
+    justify-items: center;
+  }
+
+  .navigationItem {
+    width: 52px;
+    min-height: 48px;
+    justify-content: center;
+    padding: 6px;
+  }
+
+  .navigationItemActive::before {
+    left: -11px;
+  }
+
+  .navigationIcon {
+    width: 34px;
+    height: 34px;
+    border: 0;
+  }
+
+  .topbar {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  .main {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
+@media (max-width: 620px) {
+  .dashboard {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: static;
+    height: auto;
+    min-height: 0;
+    align-items: stretch;
+    padding: 12px 14px 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .brand {
+    gap: 10px;
+    padding: 0 1px 11px;
+  }
+
+  .brandMark {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+  }
+
+  .brandCopy {
+    display: grid;
+  }
+
+  .brandName {
+    font-size: 12px;
+  }
+
+  .navigationGroup {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .navigationHeading,
+  .navigationChevron,
+  .sidebarBottom {
+    display: none;
+  }
+
+  .navigation {
+    display: flex;
+    overflow-x: auto;
+    gap: 5px;
+    padding: 0 0 9px;
+    scrollbar-width: none;
+  }
+
+  .navigation::-webkit-scrollbar {
+    display: none;
+  }
+
+  .navigationItem {
+    width: auto;
+    min-width: max-content;
+    min-height: 37px;
+    justify-content: flex-start;
+    gap: 7px;
+    padding: 5px 9px;
+    border-radius: 7px;
+  }
+
+  .navigationItemActive::before {
+    top: auto;
+    right: 9px;
+    bottom: -10px;
+    left: 9px;
+    width: auto;
+    height: 2px;
+    border-radius: 2px 2px 0 0;
+  }
+
+  .navigationIcon {
+    width: 25px;
+    height: 25px;
+    background: transparent;
+  }
+
+  .navigationCopy {
+    display: block;
+  }
+
+  .navigationLabel {
+    font-size: 10px;
+  }
+
+  .navigationDescription {
+    display: none;
+  }
+
+  .topbar {
+    height: 51px;
+    padding: 0 17px;
+  }
+
+  .breadcrumbs {
+    gap: 6px;
+    font-size: 10px;
+  }
+
+  .localStatus {
+    gap: 5px;
+    padding: 6px 8px;
+    font-size: 9px;
+  }
+
+  .main {
+    padding: 27px 17px 28px;
+  }
+
+  .pageHeading {
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 22px;
+  }
+
+  .pageTitleGroup {
+    gap: 11px;
+  }
+
+  .toolIcon {
+    width: 37px;
+    height: 37px;
+    border-radius: 10px;
+  }
+
+  .pageEyebrow {
+    margin-bottom: 5px;
+    font-size: 8px;
+  }
+
+  .pageHeading h1 {
+    font-size: clamp(19px, 6vw, 25px);
+  }
+
+  .pageDescription {
+    margin-top: 6px;
+    font-size: 10px;
+  }
+
+  .previewBadge {
+    display: none;
+  }
+
+  .workspaceNote {
+    align-items: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navigationItem {
+    transition: none;
+  }
+}

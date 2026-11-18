@@ -1,0 +1,73 @@
+.card {
+  min-width: 0;
+  padding: 19px;
+  background:
+    linear-gradient(155deg, rgb(29 35 48 / 96%), rgb(23 28 39 / 98%));
+  border: 1px solid #2b3343;
+  border-radius: 11px;
+  box-shadow:
+    0 10px 24px rgb(0 0 0 / 12%),
+    0 1px 0 rgb(255 255 255 / 2%) inset;
+}
+
+.header {
+  display: flex;
+  min-width: 0;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.titleGroup {
+  display: flex;
+  min-width: 0;
+  align-items: flex-start;
+  gap: 9px;
+}
+
+.icon {
+  display: grid;
+  width: 25px;
+  height: 25px;
+  flex: 0 0 auto;
+  color: #9daaf4;
+  background: #242d46;
+  border: 1px solid #323d5e;
+  border-radius: 7px;
+  place-items: center;
+}
+
+.titleCopy {
+  min-width: 0;
+}
+
+.titleCopy h2 {
+  margin: 0;
+  color: #e0e5ef;
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+.titleCopy p {
+  margin: 4px 0 0;
+  color: #8791a3;
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+.action {
+  flex: 0 0 auto;
+}
+
+.body {
+  min-width: 0;
+}
+
+@media (max-width: 620px) {
+  .card {
+    padding: 15px;
+    border-radius: 9px;
+  }
+}

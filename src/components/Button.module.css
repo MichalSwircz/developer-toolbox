@@ -1,0 +1,71 @@
+.button {
+  display: inline-flex;
+  min-height: 36px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 13px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1;
+  transition:
+    background-color 140ms ease,
+    border-color 140ms ease,
+    color 140ms ease,
+    box-shadow 140ms ease;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.48;
+}
+
+.icon {
+  display: inline-flex;
+  flex: 0 0 auto;
+}
+
+.primary {
+  color: #f0f2ff;
+  background: linear-gradient(180deg, #6678d9, #5263bd);
+  border-color: #7484e0;
+  box-shadow: 0 3px 9px rgb(52 64 137 / 24%);
+}
+
+.primary:not(:disabled):hover {
+  background: linear-gradient(180deg, #7484e6, #5e6fce);
+  box-shadow: 0 4px 13px rgb(52 64 137 / 36%);
+}
+
+.secondary {
+  color: #c9d1df;
+  background: #222938;
+  border-color: #343c4d;
+}
+
+.secondary:not(:disabled):hover {
+  background: #2a3244;
+  border-color: #46516a;
+}
+
+.ghost {
+  min-height: 30px;
+  padding: 0 8px;
+  color: #aab4c7;
+  background: transparent;
+  border-color: transparent;
+}
+
+.ghost:not(:disabled):hover {
+  color: #e0e5ef;
+  background: #252c39;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+}

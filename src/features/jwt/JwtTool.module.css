@@ -1,0 +1,228 @@
+.jwtTool {
+  display: grid;
+  gap: 16px;
+}
+
+.tokenCard {
+  min-width: 0;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.tokenInput {
+  min-height: 100px;
+}
+
+.decodeActions {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-top: 15px;
+  padding-top: 14px;
+  border-top: 1px solid #2a3241;
+}
+
+.actionHint {
+  color: #788396;
+  font-size: 10px;
+}
+
+.securityNotice {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  padding: 13px 15px;
+  color: #d3c49e;
+  background: linear-gradient(110deg, rgb(81 66 37 / 24%), rgb(47 41 34 / 20%));
+  border: 1px solid rgb(154 125 71 / 34%);
+  border-radius: 9px;
+}
+
+.securityIcon {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 auto;
+  color: #e2bd72;
+  background: rgb(192 149 64 / 12%);
+  border: 1px solid rgb(192 149 64 / 20%);
+  border-radius: 8px;
+  place-items: center;
+}
+
+.securityNotice p {
+  margin: 0;
+  color: #b6a987;
+  font-size: 10px;
+  line-height: 1.65;
+}
+
+.securityNotice strong {
+  color: #e4cf9f;
+  font-weight: 650;
+}
+
+.decodedResult {
+  display: grid;
+  gap: 16px;
+}
+
+.claimsGrid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.claimCard {
+  min-width: 0;
+  min-height: 158px;
+}
+
+.claimMissing {
+  margin: 0;
+  color: #8993a5;
+  font-size: 10px;
+}
+
+.claimInvalid {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  color: #e8ab77;
+}
+
+.claimInvalid svg {
+  flex: 0 0 auto;
+  margin-top: 1px;
+}
+
+.claimInvalid p {
+  margin: 0;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.claimValue {
+  display: grid;
+  gap: 6px;
+}
+
+.claimDate {
+  color: #d4dbea;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  overflow-wrap: anywhere;
+}
+
+.claimSeconds {
+  color: #8590a3;
+  font-size: 9px;
+}
+
+.expirationStatus {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  margin-top: 12px;
+  padding: 5px 8px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.expired {
+  color: #f0a2a2;
+  background: rgb(111 43 48 / 25%);
+  border-color: rgb(181 89 96 / 34%);
+}
+
+.notExpired {
+  color: #91d1a9;
+  background: rgb(38 84 57 / 23%);
+  border-color: rgb(78 143 99 / 34%);
+}
+
+.unknownExpiration {
+  color: #c3ad7c;
+  background: rgb(101 81 42 / 20%);
+  border-color: rgb(154 125 71 / 30%);
+}
+
+.sectionsGrid {
+  display: grid;
+  align-items: stretch;
+  gap: 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.jsonSection {
+  min-width: 0;
+}
+
+.jsonOutput {
+  min-height: 160px;
+  max-height: 440px;
+  overflow: auto;
+  margin: 0;
+  padding: 13px;
+  color: #cad5e8;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgb(91 108 202 / 7%), transparent 50%),
+    #111620;
+  border: 1px solid #303848;
+  border-radius: 8px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  line-height: 1.65;
+  white-space: pre;
+}
+
+.signatureNote {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: -4px 0 0;
+  color: #8691a3;
+  font-size: 9px;
+}
+
+.signatureNote svg {
+  color: #c1a66d;
+}
+
+@media (max-width: 900px) {
+  .claimsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .sectionsGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .jwtTool,
+  .decodedResult {
+    gap: 12px;
+  }
+
+  .claimsGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .claimCard {
+    min-height: 0;
+  }
+
+  .decodeActions {
+    flex-wrap: wrap;
+    gap: 9px;
+  }
+}
