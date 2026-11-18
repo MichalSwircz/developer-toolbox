@@ -1,8 +1,17 @@
 # Development Log
 
+## Repository
+
+- Repository: [developer-toolbox](https://github.com/MichalSwircz/developer-toolbox)
+- Local root: `C:\Workspace\dev-toolkit`
+- Current branch: `master`, tracking `origin/master`
+- Working tree: clean before this documentation change
+- Tracked files: 49
+- Visible Git history contains one commit: `1c243cf` (`initial project setup`, 2026-11-18). That single commit does not record the feature-by-feature development sequence below.
+
 ## Evidence note
 
-The workspace has no Git repository, so Git status and commit history are unavailable. This log summarizes the verified project state and development-task sequence; it does not invent commit hashes or dates.
+The repository metadata above comes from the current Git remote, status, and commit history. The development sections summarize the verified project changes and development-task sequence; they do not assign unsupported dates to individual milestones.
 
 ## Project setup and architecture
 
@@ -19,6 +28,7 @@ The workspace has no Git repository, so Git status and commit history are unavai
 3. Added local JWT header/payload decoding, NumericDate claim display, expiration status, and an explicit notice that signatures are not verified.
 4. Added UUID v4 generation through `crypto.randomUUID()`, quantity validation, and individual and bulk copy actions.
 5. Added UTF-8 Base64 encoding and decoding, Unicode support, input/output swapping, example data, and malformed-input handling.
+6. Used the Lucide `Binary` icon consistently for Base64 in the sidebar and tool content.
 
 ## Testing and refinement
 
@@ -36,4 +46,4 @@ The workspace has no Git repository, so Git status and commit history are unavai
 
 ## Documentation
 
-The README documents the app, features, stack, architecture, commands, limitations, and privacy/security behavior. This log records the development sequence supported by the project changes and task history; no dated chronology is asserted.
+The README documents the app, features, stack, architecture, commands, limitations, and privacy/security behavior. This log records the development sequence supported by project changes and task history; only the repository commit date is asserted.
